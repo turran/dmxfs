@@ -1,0 +1,60 @@
+== Introduction ==
+
+A way to organize your media files based on the different containers the audio and video codecs and the subtitle formats
+
+== Usage example ==
+=== Mounting your media directory ===
+{{{
+dmxfs ~/media/ ~/dmxfs
+}}}
+
+=== Listing all the caps of your media files ===
+{{{
+#> ls -l ~/dmxfs
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 application_ogg
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 application_vnd.rn-realmedia
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 application_x-apetag
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 application_x-id3
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 application_x-rar
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 audio_midi
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 audio_mpeg
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 audio_x-ac3
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 audio_x-dts
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 audio_x-flac
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 audio_x-m4a
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 audio_x-musepack
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 audio_x-pn-realaudio
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 audio_x-private1-ac3
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 audio_x-sbc
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 audio_x-vorbis
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 audio_x-voxware
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 audio_x-wav
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 audio_x-wma
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 files
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 text_plain
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 video_mpeg
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 video_quicktime
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 video_x-3ivx
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 video_x-cdxa
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 video_x-cinepak
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 video_x-divx
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 video_x-dvd-subpicture
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 video_x-h264
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 video_x-matroska
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 video_x-ms-asf
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 video_x-msmpeg
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 video_x-msvideo
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 video_x-msvideocodec
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 video_x-rle
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 video_x-svq
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 video_x-theora
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 video_x-wmv
+drwxr-xr-x 2 root root 0 1970-01-01 01:00 video_x-xvid
+}}}
+
+=== Getting the files that have a matroska container and have subtitles ===
+{{{
+#> ls -l ~/dmxfs/video_x-matroska/text_plain/files
+lrwxr-xr-x 1 root root 0 1970-01-01 01:00 00079515 -> ~/media/Planet.51.720p.Bluray.x264-CBGB.mkv
+}}}
+
